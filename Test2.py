@@ -128,7 +128,8 @@ def Dichtbij(localGrens_afstand):
 '''Functie die een Uturn maakt'''
 def Uturn():
 	#Klein stukje achteruit
-	print("Achteruit")	Achteruit()
+	print("Achteruit")	
+	Achteruit()
 	time.sleep(achteruit_tijd)
 	stop()
 
