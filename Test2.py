@@ -65,7 +65,7 @@ def Stop():
 '''Vooruit rij functie'''
 def Vooruit():
 	pwmpinAvooruit.ChangeDutyCycle(DutyCycleA)
-	pwmpinAachteruit.ChangeDutyCycle(float(Stop))
+	pwmpinAachteruit.ChangeDutyCycle(float(0))
 	pwmpinBvooruit.ChangeDutyCycle(DutyCycleB)
 	pwmpinBachteruit.ChangeDutyCycle(Stop)
 #---------------------------------------
