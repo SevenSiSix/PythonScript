@@ -112,7 +112,7 @@ def Meting():
     	ElapsedTime = StopTime - StartTime
     	Afstand = (ElapsedTime * 34300)/2
 
-    return Distance
+    	return Distance
 #-------------------------------------
 '''Functie die true geeft als de sensor een 1 geeft'''
 def Dichtbij(localGrens_afstand):
