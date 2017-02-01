@@ -18,10 +18,10 @@ led1 = 22
 led2 = 23
 #----------------------------------------
 '''Frequentie van de wielen'''
-Frequency = 20
+Frequency = 25
 '''Percentage dat de banden gebruikt worden'''
-DutyCycleA = 30
-DutyCycleB = 30
+DutyCycleA = 25
+DutyCycleB = 33
 Stop = float(0.0000000)
 #----------------------------------------
 '''Set the GPIO Pin mode to be Output'''
@@ -38,9 +38,9 @@ GPIO.setup(led1, GPIO.OUT)
 GPIO.setup(led2, GPIO.OUT)
 #----------------------------------------
 '''Andere variabelen'''
-Grens_afstand = 5
+Grens_afstand = 3
 achteruit_tijd = 0.5
-omdraai_tijd = 2
+omdraai_tijd = 0.5
 Uturn_tijd = 1
 #----------------------------------------
 '''GPIO naar PWM-software naar frequentie in Hertz'''
