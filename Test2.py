@@ -103,7 +103,7 @@ def Meting():
 		StopTime = StartTime
 
 	while GPIO.input(echoInput)==1:
-        StopTime = time.time()
+        	StopTime = time.time()
         if StopTime-StartTime >= 0.04:
 			print("Hold on there!  You're too close for me to see.")
 			StopTime = StartTime
