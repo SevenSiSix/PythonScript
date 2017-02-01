@@ -109,8 +109,8 @@ def Meting():
 			StopTime = StartTime
 			break
 
-    ElapsedTime = StopTime - StartTime
-    Afstand = (ElapsedTime * 34300)/2
+    	ElapsedTime = StopTime - StartTime
+    	Afstand = (ElapsedTime * 34300)/2
 
     return Distance
 #-------------------------------------
@@ -126,17 +126,17 @@ def Dichtbij(localGrens_afstand):
 #------------------------------------
 '''Functie die een Uturn maakt'''
 def Uturn():
-    #Klein stukje achteruit
-    print("Achteruit")
-    Achteruit()
-    time.sleep(achteruit_tijd)
-    Stop()
+	#Klein stukje achteruit
+	print("Achteruit")
+	Achteruit()
+	time.sleep(achteruit_tijd)
+	Stop()
 
-    #Naar rechts
-    print("Rechts")
-    Rechts()
-    time.sleep(omdraai_tijd)
-    Stop()
+	#Naar rechts
+    	print("Rechts")
+    	Rechts()
+    	time.sleep(omdraai_tijd)
+    	Stop()
 	
 	#Vooruit
 	print("Vooruit")
@@ -145,25 +145,24 @@ def Uturn():
 	Stop()
 	
 	#Naar rechts
-    print("Rechts")
-    Rechts()
-    time.sleep(omdraai_tijd)
-    Stop()
+    	print("Rechts")
+    	Rechts()
+    	time.sleep(omdraai_tijd)
+    	Stop()
 #------------------------------------
 '''Try-line om de volgorde van handelen te vertellen'''
 try:
-    
-	GPIO.output(echoOutput, False)
-    time.sleep(0.1)
+    GPIO.output(echoOutput, False)
+    	time.sleep(0.1)
 	#Herhalen van de commands
-    while True:
-        Vooruit()
-        time.sleep(0.1)
-        if Dichtbij(Grens_afstand):
-            Stop()
-            Uturn()
+    	while True:
+        	Vooruit()
+        	time.sleep(0.1)
+        	if Dichtbij(Grens_afstand):
+            		Stop()
+            		Uturn()
 
 	# If you press CTRL+C, cleanup and stop
-	except KeyboardInterrupt:
+except KeyboardInterrupt:
     GPIO.cleanup()
 #------------------------------------
