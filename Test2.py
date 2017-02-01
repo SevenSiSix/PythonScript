@@ -158,7 +158,7 @@ def RijdtoverZwart():
 		return False
 #-------------------------------------
 '''Sirene maken'''
-Class led(thread)
+Class led(Thread)
 	def Sirene():
 		GPIO.output(led1, 1)
 		time.sleep(0.5)
