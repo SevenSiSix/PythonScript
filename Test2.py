@@ -56,7 +56,7 @@ pwmpinBvooruit.start(Stop)
 pwmpinBachteruit.start(Stop)
 #---------------------------------------
 '''stop functie'''
-def Stop():
+def stop():
 	pwmpinAvooruit.ChangeDutyCycle(Stop)
 	pwmpinAachteruit.ChangeDutyCycle(Stop)
 	pwmpinBvooruit.ChangeDutyCycle(Stop)
@@ -129,25 +129,25 @@ def Uturn():
 	print("Achteruit")
 	Achteruit()
 	time.sleep(achteruit_tijd)
-	Stop()
+	stop()
 
 	#Naar rechts
     	print("Rechts")
     	Rechts()
     	time.sleep(omdraai_tijd)
-    	Stop()
+    	stop()
 	
 	#Vooruit
 	print("Vooruit")
 	Vooruit()
 	time.sleep(Uturn_tijd)
-	Stop()
+	stop()
 	
 	#Naar rechts
     	print("Rechts")
     	Rechts()
     	time.sleep(omdraai_tijd)
-    	Stop()
+    	stop()
 #------------------------------------
 '''Try-line om de volgorde van handelen te vertellen'''
 try:
@@ -158,7 +158,7 @@ try:
 		Vooruit()
         	time.sleep(0.1)
         	if Dichtbij(Grens_afstand):
-            		Stop()
+            		stop()
             		Uturn()
 
 	# If you press CTRL+C, cleanup and stop
