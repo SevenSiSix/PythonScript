@@ -21,7 +21,7 @@ led2 = 23
 '''Frequentie van de wielen'''
 Frequency = 25
 '''Percentage dat de banden gebruikt worden'''
-DutyCycleA = 30
+DutyCycleA = 31
 DutyCycleB = 33
 Stop = float(0.0000000)
 #----------------------------------------
@@ -39,9 +39,9 @@ GPIO.setup(led1, GPIO.OUT)
 GPIO.setup(led2, GPIO.OUT)
 #----------------------------------------
 '''Andere variabelen'''
-Grens_afstand = 2.4
+Grens_afstand = 2
 achteruit_tijd = 0.5
-omdraai_tijd = 1.2
+omdraai_tijd = 1.1
 Uturn_tijd = 1
 Rondje_draaien = 8
 #----------------------------------------
