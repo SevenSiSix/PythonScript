@@ -188,6 +188,7 @@ try:
             		Uturn()
 		elif RijdtoverZwart():
 			stop()
+			Gevonden()
 			
 	# If you press CTRL+C, cleanup and stop
 except KeyboardInterrupt:
