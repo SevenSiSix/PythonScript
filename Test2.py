@@ -38,10 +38,10 @@ GPIO.setup(led1, GPIO.OUT)
 GPIO.setup(led2, GPIO.OUT)
 #----------------------------------------
 '''Andere variabelen'''
-Grens_afstand = 15.0
+Grens_afstand = 5
 achteruit_tijd = 0.5
-omdraai_tijd = 0.75
-Uturn_tijd = 0.2
+omdraai_tijd = 2
+Uturn_tijd = 1
 #----------------------------------------
 '''GPIO naar PWM-software naar frequentie in Hertz'''
 pwmpinAvooruit = GPIO.PWM(pinAvooruit, Frequency)
