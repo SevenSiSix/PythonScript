@@ -152,11 +152,11 @@ def Uturn():
 #------------------------------------
 '''Try-line om de volgorde van handelen te vertellen'''
 try:
-    GPIO.output(echoOutput, False)
-    	time.sleep(0.1)
+	GPIO.output(echoOutput, False)
+	time.sleep(0.1)
 	#Herhalen van de commands
     	while True:
-        	Vooruit()
+		Vooruit()
         	time.sleep(0.1)
         	if Dichtbij(Grens_afstand):
             		Stop()
@@ -164,5 +164,5 @@ try:
 
 	# If you press CTRL+C, cleanup and stop
 except KeyboardInterrupt:
-    GPIO.cleanup()
+	GPIO.cleanup()
 #------------------------------------
