@@ -22,7 +22,7 @@ Frequency = 20
 '''Percentage dat de banden gebruikt worden'''
 DutyCycleA = 30
 DutyCycleB = 30
-Stop = float(0.0)
+Stop = 0.0000000
 #----------------------------------------
 '''Set the GPIO Pin mode to be Output'''
 GPIO.setup(pinAvooruit, GPIO.OUT)
