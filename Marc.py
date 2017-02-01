@@ -48,10 +48,10 @@ Uturnrechtdoortijd = 0.5
 #---------------------------------------------------------
 '''ZET ALLE MOTORS UIT'''
 def motorsUit():
-    GPIO.output(pinLinksVooruit, 0)
-    GPIO.output(pinLinksAchteruit, 0)
-    GPIO.output(pinRechtsVooruit, 0)
-    GPIO.output(pinRechtsAchteruit, 0)
+	GPIO.output(pinLinksVooruit, 0)
+	GPIO.output(pinLinksAchteruit, 0)
+	GPIO.output(pinRechtsVooruit, 0)
+	GPIO.output(pinRechtsAchteruit, 0)
 #---------------------------------------------------------
 '''RIJ VOORUIT'''
 def rijVooruit():
@@ -62,31 +62,31 @@ def rijVooruit():
 #---------------------------------------------------------
 '''RIJ ACHTERUIT'''
 def rijAchteruit():
-    GPIO.output(pinLinksVooruit, 0)
-    GPIO.output(pinLinksAchteruit, 1)
-    GPIO.output(pinRechtsVooruit, 0)
-    GPIO.output(pinRechtsAchteruit, 1)
+    	GPIO.output(pinLinksVooruit, 0)
+    	GPIO.output(pinLinksAchteruit, 1)
+    	GPIO.output(pinRechtsVooruit, 0)
+    	GPIO.output(pinRechtsAchteruit, 1)
 #---------------------------------------------------------
 '''SLA LINKSAF'''
 def Links():
 	GPIO.output(pinLinksVooruit, 0)
-    GPIO.output(pinLinksAchteruit, 1)
-    GPIO.output(pinRechtsVooruit, 1)
-    GPIO.output(pinRechtsAchteruit, 0)
+	GPIO.output(pinLinksAchteruit, 1)
+	GPIO.output(pinRechtsVooruit, 1)
+    	GPIO.output(pinRechtsAchteruit, 0)
 #---------------------------------------------------------
 '''SLA RECHTSAF'''
 def Rechts():
 	GPIO.output(pinLinksVooruit, 1)
-    GPIO.output(pinLinksAchteruit, 0)
-    GPIO.output(pinRechtsVooruit, 1)
-    GPIO.output(pinRechtsAchteruit, 0)
+	GPIO.output(pinLinksAchteruit, 0)
+	GPIO.output(pinRechtsVooruit, 1)
+	GPIO.output(pinRechtsAchteruit, 0)
 #---------------------------------------------------------
 '''Functie voor het laten merken dat de stip gevonden is'''
 def Gevonden():
 	GPIO.output(pinLinksVooruit, 0)
-    GPIO.output(pinLinksAchteruit, 1)
-    GPIO.output(pinRechtsVooruit, 0)
-    GPIO.output(pinRechtsAchteruit, 0)
+	GPIO.output(pinLinksAchteruit, 1)
+	GPIO.output(pinRechtsVooruit, 0)
+	GPIO.output(pinRechtsAchteruit, 0)
 	
 	time.sleep(0.5)
 #---------------------------------------------------------
