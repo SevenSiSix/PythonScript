@@ -57,38 +57,38 @@ pwmpinBachteruit.start(Stop)
 #---------------------------------------
 '''stop functie'''
 def Stop():
-    pwmpinAvooruit.ChangeDutyCycle(Stop)
-    pwmpinAachteruit.ChangeDutyCycle(Stop)
-    pwmpinBvooruit.ChangeDutyCycle(Stop)
-    pwmpinBachteruit.ChangeDutyCycle(Stop)
+	pwmpinAvooruit.ChangeDutyCycle(Stop)
+	pwmpinAachteruit.ChangeDutyCycle(Stop)
+	pwmpinBvooruit.ChangeDutyCycle(Stop)
+	pwmpinBachteruit.ChangeDutyCycle(Stop)
 #---------------------------------------
 '''Vooruit rij functie'''
 def Vooruit():
-    pwmpinAvooruit.ChangeDutyCycle(DutyCycleA)
-    pwmpinAachteruit.ChangeDutyCycle(Stop)
-    pwmpinBvooruit.ChangeDutyCycle(DutyCycleB)
-    pwmpinBachteruit.ChangeDutyCycle(Stop)
+	pwmpinAvooruit.ChangeDutyCycle(DutyCycleA)
+	pwmpinAachteruit.ChangeDutyCycle(Stop)
+	pwmpinBvooruit.ChangeDutyCycle(DutyCycleB)
+	pwmpinBachteruit.ChangeDutyCycle(Stop)
 #---------------------------------------
 '''Achteruit rij functie'''
 def Achteruit():
-    pwmpinAvooruit.ChangeDutyCycle(Stop)
-    pwmpinAachteruit.ChangeDutyCycle(DutyCycleA)
-    pwmpinBvooruit.ChangeDutyCycle(Stop)
-    pwmpinBachteruit.ChangeDutyCycle(DutyCycleB)
+	pwmpinAvooruit.ChangeDutyCycle(Stop)
+	pwmpinAachteruit.ChangeDutyCycle(DutyCycleA)
+	pwmpinBvooruit.ChangeDutyCycle(Stop)
+	pwmpinBachteruit.ChangeDutyCycle(DutyCycleB)
 #--------------------------------------
 '''Links afslaan'''
 def Links():
-    pwmpinAvooruit.ChangeDutyCycle(Stop)
-    pwmpinAachteruit.ChangeDutyCycle(DutyCycleA)
-    pwmpinBvooruit.ChangeDutyCycle(DutyCycleB)
-    pwmpinBachteruit.ChangeDutyCycle(Stop)
+	pwmpinAvooruit.ChangeDutyCycle(Stop)
+	pwmpinAachteruit.ChangeDutyCycle(DutyCycleA)
+	pwmpinBvooruit.ChangeDutyCycle(DutyCycleB)
+	pwmpinBachteruit.ChangeDutyCycle(Stop)
 #--------------------------------------
 '''Rechts afslaan'''
 def Rechts():
-    pwmpinAvooruit.ChangeDutyCycle(DutyCycleA)
-    pwmpinAachteruit.ChangeDutyCycle(Stop)
-    pwmpinBvooruit.ChangeDutyCycle(Stop)
-    pwmpinBachteruit.ChangeDutyCycle(DutyCycleB)
+	pwmpinAvooruit.ChangeDutyCycle(DutyCycleA)
+	pwmpinAachteruit.ChangeDutyCycle(Stop)
+	pwmpinBvooruit.ChangeDutyCycle(Stop)
+	pwmpinBachteruit.ChangeDutyCycle(DutyCycleB)
 #--------------------------------------
 '''Meting maken'''
 def Meting():
