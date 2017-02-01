@@ -1,6 +1,7 @@
 '''Libraries importeren'''
 import RPi.GPIO as GPIO 
-import time 
+import time
+from threading import Thread
 #-----------------------------------------
 '''GPIO Modes instellen'''
 GPIO.setmode(GPIO.BCM)
@@ -42,6 +43,7 @@ Grens_afstand = 10
 achteruit_tijd = 0.3
 omdraai_tijd = 0.4
 Uturn_tijd = 0.3
+Rondje_draaien = 8
 #----------------------------------------
 '''GPIO naar PWM-software naar frequentie in Hertz'''
 pwmpinAvooruit = GPIO.PWM(pinAvooruit, Frequency)
@@ -126,8 +128,7 @@ def Dichtbij(localGrens_afstand):
 '''Functie die een Uturn maakt'''
 def Uturn():
 	#Klein stukje achteruit
-	print("Achteruit")
-	Achteruit()
+	print("Achteruit")	Achteruit()
 	time.sleep(achteruit_tijd)
 	stop()
 
@@ -135,8 +136,7 @@ def Uturn():
     	print("Rechts")
     	Rechts()
     	time.sleep(omdraai_tijd)
-    	stop()
-	
+    	stop()	
 	#Vooruit
 	print("Vooruit")
 	Vooruit()
@@ -149,6 +149,31 @@ def Uturn():
     	time.sleep(omdraai_tijd)
     	stop()
 #------------------------------------
+'''Witte stip vinden'''
+def RijdtoverZwart():
+	if GPIO.input(lichtinput) == 0:
+		return True
+	else:
+		return False
+#-------------------------------------
+'''Sirene maken'''
+Class led(thread)
+	def Sirene():
+		GPIO.output(led1, 1)
+		time.sleep(0.5)
+		GPIO.output(led1, 0)
+		GPIO.output(led2, 1)
+		time.sleep(0.5)
+		GPIO.output(led2, 0)
+#---------------------------------------
+'''Gevonden!'''
+def Gevonden():
+	if RijdtoverZwart == True:
+		Sirene()
+		Links()
+		time.sleep(rondje_draaien)
+
+
 '''Try-line om de volgorde van handelen te vertellen'''
 try:
 	GPIO.output(echoOutput, False)
@@ -160,7 +185,9 @@ try:
         	if Dichtbij(Grens_afstand):
             		stop()
             		Uturn()
-
+		elif RijdtoverZwart():
+			stop()
+			
 	# If you press CTRL+C, cleanup and stop
 except KeyboardInterrupt:
 	GPIO.cleanup()
