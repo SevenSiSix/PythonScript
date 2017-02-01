@@ -107,7 +107,7 @@ def Meting():
         if StopTime-StartTime >= 0.04:
 			print("Hold on there!  You're too close for me to see.")
 			StopTime = StartTime
-			break
+	break
 
     	ElapsedTime = StopTime - StartTime
     	Afstand = (ElapsedTime * 34300)/2
