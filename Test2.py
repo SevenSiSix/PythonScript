@@ -184,6 +184,7 @@ try:
         	time.sleep(0.1)
         	if Dichtbij(Grens_afstand):
             		stop()
+			Sirene()
             		Uturn()
 		elif RijdtoverZwart():
 			stop()
