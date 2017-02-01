@@ -158,13 +158,13 @@ def RijdtoverZwart():
 		return False
 #-------------------------------------
 '''Sirene maken'''
-	def Sirene():
-		GPIO.output(led1, 1)
-		time.sleep(0.5)
-		GPIO.output(led1, 0)
-		GPIO.output(led2, 1)
-		time.sleep(0.5)
-		GPIO.output(led2, 0)
+def Sirene():
+	GPIO.output(led1, 1)
+	time.sleep(0.5)
+	GPIO.output(led1, 0)
+	GPIO.output(led2, 1)
+	time.sleep(0.5)
+	GPIO.output(led2, 0)
 #---------------------------------------
 '''Gevonden!'''
 def Gevonden():
