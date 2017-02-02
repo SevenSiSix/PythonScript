@@ -1,7 +1,7 @@
 '''Libraries importeren'''
 import RPi.GPIO as GPIO 
 import time
-from threading import Thread
+import threading
 #-----------------------------------------
 '''GPIO Modes instellen'''
 GPIO.setmode(GPIO.BCM)
@@ -152,19 +152,20 @@ def Uturn():
 #------------------------------------
 '''Witte stip vinden'''
 def RijdtoverZwart():
-	if GPIO.input(lichtinput) == 1:
+	if GPIO.input(lichtinput) == 0:
 		return True
 	else:
 		return False
 #-------------------------------------
 '''Sirene maken'''
-def Sirene():
-	GPIO.output(led1, 1)
-	time.sleep(0.5)
-	GPIO.output(led1, 0)
-	GPIO.output(led2, 1)
-	time.sleep(0.5)
-	GPIO.output(led2, 0)
+class sirene(Thread):
+	def Sirene():
+		GPIO.output(led1, 1)
+		time.sleep(0.5)
+		GPIO.output(led1, 0)
+		GPIO.output(led2, 1)
+		time.sleep(0.5)
+		GPIO.output(led2, 0)
 #---------------------------------------
 '''Gevonden!'''
 def Gevonden():
