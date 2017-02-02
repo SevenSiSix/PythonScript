@@ -151,8 +151,8 @@ def Uturn():
     	stop()
 #------------------------------------
 '''Witte stip vinden'''
-def RijdtoverWit():
-	if GPIO.input(lichtinput) == 1:
+def RijdtoverZwart():
+	if GPIO.input(lichtinput) == 0:
 		return True
 	else:
 		return False
@@ -188,7 +188,7 @@ try:
             		stop()
 			Sirene()
             		Uturn()
-		elif RijdtoverWit():
+		elif RijdtoverZwart():
 			stop()
 			Sirene()
 			Gevonden()
