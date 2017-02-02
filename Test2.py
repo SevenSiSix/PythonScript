@@ -41,7 +41,7 @@ GPIO.setup(led2, GPIO.OUT)
 '''Andere variabelen'''
 Grens_afstand = 25
 achteruit_tijd = 0.5
-omdraai_tijd = 0.6
+omdraai_tijd = 2
 Uturn_tijd = 2
 Rondje_draaien = 8
 #----------------------------------------
