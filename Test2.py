@@ -151,8 +151,8 @@ def Uturn():
     	stop()
 #------------------------------------
 '''Witte stip vinden'''
-def RijdtoverZwart():
-	if GPIO.input(lichtinput) == 0:
+def RijdtoverWit():
+	if GPIO.input(lichtinput) == 1:
 		return True
 	else:
 		return False
@@ -172,6 +172,8 @@ def Gevonden():
 		Sirene()
 		Links()
 		time.sleep(rondje_draaien)
+		Rechtdoor()
+		time.sleep(0.7)
 
 
 '''Try-line om de volgorde van handelen te vertellen'''
@@ -186,8 +188,9 @@ try:
             		stop()
 			Sirene()
             		Uturn()
-		elif RijdtoverZwart():
+		elif RijdtoverWit():
 			stop()
+			Sirene()
 			Gevonden()
 			
 	# If you press CTRL+C, cleanup and stop
