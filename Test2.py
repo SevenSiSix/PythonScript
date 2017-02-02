@@ -42,7 +42,7 @@ GPIO.setup(led2, GPIO.OUT)
 Grens_afstand = 22
 achteruit_tijd = 0.5
 omdraai_tijd = 0.6
-Uturn_tijd = 2
+Uturn_tijd = 0.7
 Rondje_draaien = 8
 #----------------------------------------
 '''GPIO naar PWM-software naar frequentie in Hertz'''
@@ -152,7 +152,7 @@ def Uturn():
 #------------------------------------
 '''Witte stip vinden'''
 def RijdtoverZwart():
-	if GPIO.input(lichtinput) == 0:
+	if GPIO.input(lichtinput) == 1:
 		return True
 	else:
 		return False
